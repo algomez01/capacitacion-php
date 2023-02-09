@@ -19,11 +19,7 @@ class UserType extends AbstractType
             //->add('roles')
             ->add('password', PasswordType::class)
             ->add('save', SubmitType::class, [
-                'label' => 'Guardar',
-                'attr' => [
-                    'class' => 'btn btn-primary'
-                ]
-            ])
+                'label' => 'Guardar'])
             //->add('estado')
         ;
     }

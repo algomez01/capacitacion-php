@@ -71,7 +71,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct(){
         $this->estado = true;
-        $this->roles = ('ROLE_USER');
+        $this->roles = ["ROLE_USER"];
     }    
     
     /**
