@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LibrosController extends AbstractController
 {
     /**
-     * @Route("/", name="app_libros_index", methods={"GET"})
+     * @Route("/principal", name="app_libros_index", methods={"GET"})
      */
     public function index(LibrosRepository $librosRepository): Response
     {
@@ -57,7 +57,7 @@ class LibrosController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="app_libros_edit", methods={"GET", "POST"})
+     * @Route("/edit/{id}", name="app_libros_edit", methods={"GET", "POST"})
      */
     public function edit(Request $request, Libros $libro, LibrosRepository $librosRepository): Response
     {
@@ -77,7 +77,7 @@ class LibrosController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="app_libros_delete", methods={"POST"})
+     * @Route("/delete/{id}", name="app_libros_delete", methods={"POST"})
      */
     public function delete(Request $request, Libros $libro, LibrosRepository $librosRepository): Response
     {
